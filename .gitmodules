@@ -1,6 +1,6 @@
 [submodule "StyleTTS2"]
 	path = StyleTTS2
-	url = https://github.com/semidark/StyleTTS2.git
+	url = https://github.com/isthatm/StyleTTS2.git
 	branch = main
 [submodule "kokoro"]
 	path = kokoro

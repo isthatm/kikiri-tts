@@ -37,7 +37,7 @@ This repo uses **git submodules** (`kokoro/` and `StyleTTS2/`). Clone with
 `--recurse-submodules` or those directories will be empty:
 
 ```bash
-git clone --recurse-submodules https://github.com/semidark/kikiri-tts
+git clone --recurse-submodules https://github.com/isthatm/kikiri-tts
 cd kikiri-tts
 uv sync
 ```

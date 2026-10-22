@@ -6,7 +6,7 @@
 > This repository was formerly named `kokoro-deutsch`. The Python package and the
 > published HuggingFace model still use the old `kokoro-deutsch` name.
 
-Training recipe for fine-tuning [Kokoro-82M](https://github.com/hexgrad/kokoro) for German with a patched [StyleTTS2](https://github.com/yl4579/StyleTTS2) submodule.
+Training recipe for fine-tuning [Kokoro-82M](https://github.com/hexgrad/kokoro) for German with a patched [StyleTTS2](https://github.com/isthatm/StyleTTS2) submodule.
 
 ## What This Is
 
@@ -106,7 +106,7 @@ uv run scripts/test_inference.py \
 
 ```text
 kokoro/              # Kokoro fork submodule (contains the `kokoro/` Python package)
-StyleTTS2/           # Patched training code (git submodule: semidark/StyleTTS2)
+StyleTTS2/           # Patched training code (git submodule: isthatm/StyleTTS2)
 scripts/             # Dataset prep, voicepack extraction, inference testing
 configs/             # Training config(s)
 docs/                # Training guide, troubleshooting, architecture notes
