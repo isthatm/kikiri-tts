@@ -205,6 +205,23 @@ Run from `StyleTTS2/`:
 accelerate launch train_first.py --config_path ../configs/config_german_ft.yml
 ```
 
+### Continue an interrupted Stage 2 run
+
+Keep the original training settings and lists. Set this top-level field in the YAML:
+
+```yaml
+resume_checkpoint: /absolute/path/to/epoch_2nd_00002.pth
+epochs_2nd: 4  # total target; this example continues with epoch 4
+```
+
+Run the Stage 2 command above. Recovery restores every model component and optimizer,
+keeps the learned prosodic encoder, and starts after the saved epoch. It overrides
+the normal Stage 1/pretrained initialization path. Incompatible or incomplete
+checkpoints stop training rather than silently loading part of the state.
+
+Legacy checkpoints omit random-number state, so continuation is not exactly reproducible.
+This trainer does not advance its constructed LR schedulers; saved optimizer learning rates are restored.
+
 ### Loss interpretation
 
 | Loss | What it means | Healthy trend |
